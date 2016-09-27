@@ -1,11 +1,18 @@
 package popups.controller;
 
-import javax.swing.JOptionPane;
+import popups.view.PopupsViewer;
 
-public class popupsController
+
+public class PopupsController
 {
-	public void displayMessage(String message)
+	PopupsViewer popupsViewer;
+	
+	public PopupsController(){
+		popupsViewer = new PopupsViewer();
+	}
+	
+	public void start()
 	{
-		JOptionPane.showMessageDialog(null, message);
+		popupsViewer.displayMessage("Isaac is a noob");
 	}
 }
