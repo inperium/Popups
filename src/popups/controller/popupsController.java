@@ -2,17 +2,27 @@ package popups.controller;
 
 import popups.view.PopupsViewer;
 
-
 public class PopupsController
 {
-	PopupsViewer popupsViewer;
+	private PopupsViewer display;
 	
-	public PopupsController(){
-		popupsViewer = new PopupsViewer();
+	public PopupsController()
+	{
+		display = new PopupsViewer();
 	}
 	
 	public void start()
 	{
-		popupsViewer.displayMessage("Isaac is a noob");
+		int count = 0;
+		String answer = "sample";
+		while(!answer.equals(""))
+		{
+			answer = display.collectResponse("Your antivirus software has encountered a virus. Please\n enter your SSN to allow it to delete the infected file.");
+					
+		}
+
 	}
+		
+	
+	
 }

@@ -3,6 +3,14 @@ package popups.view;
 import javax.swing.JOptionPane;
 
 public class PopupsViewer
+
+/**
+ * PopUp Display class with three methods for GUI.
+ * @author Isaac Bowen
+ * @version September 27, 2016
+ *
+ */
+
 {
 	/**
 	 * Creates a PopUp message to show the user a screen.
