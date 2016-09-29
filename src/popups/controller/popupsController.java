@@ -46,6 +46,24 @@ public class PopupsController
 		
 		return validDouble;
 	}
+	
+	private boolean isInteger(String potentialValue)
+	{
+		boolean validInteger = false;
+		
+		try
+		{
+			int testVal = Integer.parseInt(potentialValue);
+			validInteger = true;
+		}
+		catch(NumberFormatException notIntegerError)
+		{
+			display.displayMessage(notIntegerError.getMessage());
+			display.displayMessage("Please enter a number.");
+		}
+		
+		return validInteger;
+	}
 
 
 }
