@@ -15,13 +15,14 @@ public class PopupsController
 	{
 		int count = 0;
 		String answer = "sample";
-		while(!answer.equals(""))
+		while(answer != null & !isDouble(answer))
 		{
 			answer = display.collectResponse("Your antivirus software has encountered a virus. Please\n enter your SSN to allow it to delete the infected file.");
-					
+			while (answer == null)
+			{
+				answer = display.collectResponse("Your antivirus software has encountered a virus. Please\n enter your SSN to allow it to delete the infected file.");
+			}
 		}
-		
-		
 	}
 	
 	/**
@@ -43,9 +44,16 @@ public class PopupsController
 		{
 			
 		}
-		
+
 		return validDouble;
 	}
+	
+	/**
+	 * Checks the suppliedString value to see if it can be converted to an integer.
+	 * If it can not a PopUp is displayed.
+	 * @param potentialValue The supplied String.
+	 * @return Whether a conversion to an integer is possible.
+	 */
 	
 	private boolean isInteger(String potentialValue)
 	{
