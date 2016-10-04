@@ -157,7 +157,28 @@ public class PopupsController
 		Thingy tempThing = thingyList.get(4);
 		tempThing.setWords("also changed");
 		
-		for()
+		for (int index = 0; index <thingyList.size(); index++)
+		{
+			display.displayMessage(thingyList.get(index).getWords());
+		}
+		Thingy replacement = new Thingy();
+		replacement.setWords("I am a replicant");
+
+				Thingy old = thingyList.set(0, replacement);
+
+				for(int index = 0; index < thingyList.size(); index++)
+				{
+				display.displayMessage(thingyList.get(index).getWords());
+				}
+		old.setWords("I was replaced :(");
+		display.displayMessage(old.getWords());
+		
+		thingyList.remove(4);
+		display.displayMessage("the size is now " + thingyList.size());
+		old = thingyList.remove(4);
+		display.displayMessage("The size is now " + thingyList.size());
+		display.displayMessage("This is what I removed: " + old.getWords());
+		thingyList.add(0,old);
 		
 	}
 
