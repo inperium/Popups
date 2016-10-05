@@ -179,6 +179,11 @@ public class PopupsController
 		display.displayMessage("The size is now " + thingyList.size());
 		display.displayMessage("This is what I removed: " + old.getWords());
 		thingyList.add(0,old);
+	
+		
+
+		
+
 		
 	}
 
