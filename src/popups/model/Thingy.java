@@ -7,6 +7,11 @@ public class Thingy
 	private double value;
 	private String words;
 	private boolean isvalid;
+	
+	public Thingy()
+	{
+		number = 9;
+	}
 	public int getNumber()
 	{
 		return number;
